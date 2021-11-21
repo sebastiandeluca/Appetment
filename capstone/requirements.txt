@@ -1,0 +1,9 @@
+(I'm not entirely sure what to include / not include in this)
+Django
+React
+Python
+JavaScript
+
+
+Python packages:
+json

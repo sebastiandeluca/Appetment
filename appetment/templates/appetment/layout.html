@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Appetment{% endblock %}</title>
+        <link rel='icon' href="https://lh3.googleusercontent.com/fXiiHg3N5UtNDzAZDuVq8q8qFMOhB1rwkrr1Ev3EHvWZTmp8PyWjZAf1R2YuWgJ8qr7oO1KZQEmoJ_KFPpf62SjQGr-p6O14x4JH1N4RwfMYlWKdnNHYgHY2X7TUVjtohX5o46ku7opFRVGATydzIvzCTaspwuSUkqZsMdb4ihDC8HTr3hy-w_0dIGN55u56IPRDDUIhTMH-ji5ZkTo017CAraacg_FM9mAvBMBkF67wLzdQusuRGcU0L_h1NtQpDkk0ILk_i2GYAJTx4UG7v_NFgHsAHkaS8YKro9HcyZvJ2q653HIDG0CNSfFMVf0XS8OBsEF4st77o7DCinxUHqOcCmwXZwnCSAL-rLMNQB3DPrtFU5p3st1WFz7FsBcTYnnt7r7INsKzuKhom3aoDNUaGKsgZvvA1AXEbBq6Q4tToaLdwk7t00odEvah-Izz5xMGrrgwxJ-Y-JvFCxQ3Gc0vIAWagt5HFnWPXIIg_v6wSgYMTByOw86j1nlP9Z-0qsFiN_YraipohxkiwJ0_1Pm-F_YGsxueXBdfOmUQsQ0v7gSCMf1d6cu-JZcLYA5ty5txObKz5OuGEzMHArx6Gz24nFy2WSnGyfbjVEu6TmZ36f7nSDX5WUkHlc18poHkownAU8eOWlI5gUg9X5cD_lHDtK4BMYHA42OOEVbXHgNJbavuyeivIzZrPTWsKEtwiU2e4EgVvUcV0B3CxA6a--o=w500-h421-no?authuser=0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'appetment/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" media="screen and (max-device-width: 480px)" href="{% static 'appetment/mobile-styles.css' %}" />
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+    <div id="disclaimer" class="flexbox">
+        <div id="company-stuff">
+            Appetment Incorporated<br>Mississauga, Ontario<br>Established 2021.
+        </div>
+        <div id="disclaimer-msg">
+            <p>Appetment is not a real company or platform. We are not liable to care for or manage the care of your pet. We do not have any experts or trained veterinarians employed in our staff. Do not use this platform to make appointments.</p>
+        </div>
+    </div>
+</div>
+</html>

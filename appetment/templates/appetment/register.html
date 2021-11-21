@@ -1,0 +1,42 @@
+{% extends "appetment/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div id="header" class="flexbox">
+    <div id="header-container">
+        <div id="dashboard-title" class="flexbox">
+            <h1 id="company-name">Appetment</h1>
+        </div>
+        <div id="dashboard-tagline" class='flexbox'>
+            <h3 id="tagline">Vet Visits Made Simple.</h3><br>
+        </div>
+        
+    </div>
+</div>
+<div id="go-back" class="flexbox">
+    <div id="back-btn">
+        <a id="go-back" class="dashboard-btn" href="{% url 'index' %}">Back</a> 
+    </div>
+</div>
+<hr>
+<div id="login-container" >
+    <h2 id="login-label" class="flexbox">Create Account:</h2>
+    <div id="login-page" class="flexbox">
+        <form method="POST" action="{% url 'register' %}" id="register-form">
+            <p>{{ message }}</p>
+            {% csrf_token %}
+            <h2 id="login-label">Email:</h2>
+            <input type="text" name="email" class="login-form-text" placeholder="thisisyouremail@gmail.com"><br>
+            <h2 id="login-label">Create Password:</h2>
+            <input type="password" name="password" class="login-form-text" placeholder="Enter your password"><br>
+            <h2 id="login-label">Confirm Password:</h2>
+            <input type="password" name="confirmation" class="login-form-text" placeholder="Confirm your password"><br>
+            <button type="submit" id='login-btn'>Register</button><br>
+            <p id="have-acc">Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
+            
+        </form>
+        
+    </div>
+</div>
+
+{% endblock %}

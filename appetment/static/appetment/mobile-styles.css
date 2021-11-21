@@ -1,0 +1,429 @@
+:root {
+    --blue: #13AED0;
+    --red: #AD5405;
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("fonts/Metropolis-Regular.otf");
+}
+
+@font-face {
+    font-family: "Metropolis-Bold";
+    src: url("fonts/Metropolis-Bold.otf");
+}
+
+@font-face {
+    font-family: "Metropolis-Light";
+    src:url("fonts/Metropolis-Light.otf");
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#company-name {
+    font-family: 'Metropolis-Bold';
+    font-size: 128px;
+    margin-top: 5%;
+    color: var(--red);
+    margin: 1% 0 0 0;
+    
+}
+
+#about {
+    font-family: 'Metropolis-Bold';
+    font-size: 92px;
+    margin-top: 5%;
+    margin: 5% 0% 0 5%;
+    
+}
+
+#process {
+    font-family: 'Metropolis-Bold';
+    font-size: 32px;
+    margin: 1% 0% 5% 5%;
+    
+}
+
+#about-us {
+    font-family: 'Metropolis';
+    font-size: 48px;
+    margin: 1% 10% 0 10%;
+}
+
+#tagline {
+    font-family: "Metropolis-Light";
+    font-size: 72px;
+}
+
+#landing-img {
+    width: min-content;
+    justify-content: center;
+    height: 584px;
+    margin: 0% 2% 3% 5.5%;
+    border: 4px solid var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#disclaimer{
+    background-color: var(--soft-grey);
+    color: grey;
+    font-family: "Metropolis-Light";
+    font-size: 28px;
+    padding: 5% 15% 1% 15%;
+}
+
+#company-stuff {
+    position: absolute;
+    transform: translateX(-565%);
+}
+
+#forgot {
+    margin-left: 5%;
+    font-family: 'Metropolis-Bold';
+ }
+ 
+ #have-acc {
+     font-family: "Metropolis-Bold";
+     margin-top: 5%;
+ }
+
+ #login-page {
+    height: 1075px;
+    margin-bottom: 300px;
+}
+ 
+#login-label {
+    font-family: 'Metropolis-Bold';
+    font-size: 72px;
+    margin-top: 1%;
+}
+
+#login-btn {
+    transition: 550ms ease-out;
+    padding: 3%;
+    font-family: 'Metropolis-Light';
+    border: none;
+    min-width: 250px;
+    min-height: 125px;
+    border-radius: 35px;
+    background-color: var(--red);
+    color: white;
+    font-size: 48px;
+}
+
+#forgot {
+    margin-left: 5%;
+    font-family: 'Metropolis-Bold';
+ }
+ 
+ #have-acc {
+     font-family: "Metropolis-Bold";
+     font-size: 38px;
+     margin-top: 5%;
+ }
+
+ #nav {
+    padding: 1%;
+}
+
+#manage-profiles-header {
+    font-family: "Metropolis-Bold";
+    background-color: var(--blue);
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    margin: 0% 5% 5% 5%;
+    padding: 5% 0% 5% 0%;
+    border-radius: 35px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-header {
+    font-family: "Metropolis-Bold";
+    margin-top: 1%;
+}
+
+#form-btn {
+    transition: all 550ms ease-in-out;
+    padding: 2%;
+    min-width: 255px;
+    height: 115px;
+    font-size: 32px;
+    font-family: 'Metropolis-Light';
+    border-radius: 15px;
+    border: none;
+    background-image: linear-gradient(to right, var(--red) 50%, var(--blue) 50%);
+    background-size: 200%;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2%;
+}
+
+#appt-radio {
+    font-family: 'Metropolis-Bold';
+    font-size: 36px;
+    justify-self: center;
+}
+
+#appt-radio:last-child {
+    padding-left: 5%;
+}
+
+#radio {
+    border-radius: 5px;
+    height: 55px;
+    width: 55px;
+}
+
+#main-logo {
+    margin-top: 0%;
+}
+
+#pet-profiles {
+    font-size: 36px;
+    font-family: 'Metropolis';
+    text-align: center;
+}
+
+#pet-image {
+    transition: all 500ms ease-in-out;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border: 8px solid var(--red);
+    border-radius: 100%;
+}
+
+#pet-image:hover {
+    transition: all 500ms ease-in-out;
+    transform: scale(1.05);
+    border-color: var(--blue);
+}
+
+#pet-profile-name {
+    font-family: 'Metropolis-Bold';
+    text-align: center;
+    font-size: 45px;
+    width: 450px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+#appt-pet-image:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.05);
+}
+
+#appt-pet-image {
+    transition: all 250ms ease-in-out;
+    width: 175px;
+    height: 175px;
+}
+
+#appt-options-list {
+    display: flex;
+    float: left;
+    justify-content: center;
+    margin-left: 0%;
+}
+
+#appt-spacing {
+    padding-right: 15%;
+}
+
+#appt-name {
+    margin-bottom: 2%;
+    font-family: 'Metropolis-Bold';
+    text-align: center;
+    font-size: 32px;
+    height: 45px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+#pp-main-pet {
+    font-family: 'Metropolis-Bold';
+    text-align: center;
+    margin-top: 1%;
+    font-size: 48px;
+}
+
+#pet-desc {
+    font-size: 46px;
+}
+
+#pp-img-lg {
+    border: 16px solid var(--red);
+}
+
+#pp-main-edit {
+    transition: all 500ms ease-in-out;
+    font-family: 'Metropolis-Bold';
+    font-size: 28px;
+    border-radius: 14px;
+    width: 100px;
+    height: 75px;
+    border: none;
+    background-color: var(--soft-grey);
+    float: right;
+    margin-top: -10%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+#pp-appt-reason {
+    width: 600px;
+    height: 150px;
+    font-size: 48px;
+    padding-top: 7.5%;
+}
+
+#not-accepted {
+    font-size: 28px;
+    margin-left: 5%;
+}
+
+#appt-container {
+    margin-left: -6%;
+}
+
+#appt-date {
+    font-size: 32px;
+}
+
+#user-name {
+    animation: load-from-top 500ms;
+    font-family: 'Metropolis-Bold';
+    font-size: 48px;
+    text-align: center;
+    margin-right: 5%;
+}
+
+#postal {
+    animation: load-from-top 500ms;
+    font-family: 'Metropolis-Bold';
+    font-size: 48px;
+    text-align: center;
+}
+
+#edit-prompt {
+    animation: load-from-top 500ms;
+    font-family: 'Metropolis-Light';
+    font-size: 38px;
+    text-align: center;
+}
+
+#edit-user-profile-btn {
+    transition: all 250ms ease-in-out;
+    font-family: 'Metropolis';
+    font-size: 48px;
+    color: white;
+    min-width: 300px;
+    height: 125px;
+    text-decoration: none;
+    border: none;
+    background-color: var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    justify-content: center;
+    padding: 3% 4% 5% 4%;
+    margin-bottom: 5%;
+    margin-left: 27.5%;
+}
+
+#edit-user-profile-btn:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+}
+
+ .profile-form-text {
+    transition: all 550ms ease-in-out;
+    border: 4px solid var(--red);
+    border-radius: 34px;
+    font-size: 48px;
+    padding: 2%;
+    width: 750px;
+    height: 150px;
+    margin: 0% 0% 3% 0%;
+    justify-content: center;
+}
+
+.login-form-text {
+    border: 4px solid var(--red);
+    border-radius: 54px;
+    font-size: 48px;
+    padding: 2%;
+    width: 850px;
+    height: 150px;
+    margin: 2% 0% 5% 0%;
+    position: relative;
+    justify-content: center;
+}
+
+.dashboard-btn {
+    transition: all 250ms ease-in-out;
+    font-family: 'Metropolis-Light';
+    font-size: 52px;
+    position: relative;
+    color: white;
+    width: 250px;
+    height: auto;
+    border: none;
+    background: var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.dashboard-btn-auth {
+    transition: all 250ms ease-in-out;
+    font-family: 'Metropolis-Light';
+    font-size: 52px;
+    position: relative;
+    color: white;
+    width: 250px;
+    height: auto;
+    border: none;
+    background: var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.service-btn {
+    transition: all 250ms ease-in-out;
+    font-family: 'Metropolis';
+    font-size: 30px;
+    color: white;
+    min-width: 300px;
+    height: 125px;
+    text-decoration: none;
+    border: none;
+    background-color: var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    justify-content: center;
+    padding: 15% 2% 15% 2%;
+    margin-bottom: 5%;
+}
+
+.service-btn:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+}
+
+.pet-appt-overview {
+    width: 165px;
+    justify-content: center;
+    margin-right: 3%;
+}

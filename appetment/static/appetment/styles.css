@@ -1,0 +1,653 @@
+:root {
+    --blue: #35C6E6;
+    --red: #AD5405;
+    --off-white: #FFF7F0;
+    --beige:#E6D2C1;
+    --turqoise:#628F99;
+    --soft-grey: rgba(0, 0, 0, 0.05);
+    --med-grey: rgba(0, 0, 0, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+    animation: fade;
+    animation-duration: 650ms;
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("fonts/Metropolis-Regular.otf");
+}
+
+@font-face {
+    font-family: "Metropolis-Bold";
+    src: url("fonts/Metropolis-Bold.otf");
+}
+
+@font-face {
+    font-family: "Metropolis-Light";
+    src:url("fonts/Metropolis-Light.otf");
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#company-name {
+    font-family: 'Metropolis-Bold';
+    font-size: 84px;
+    color: var(--red);
+    margin: 1% 0 0 0;
+    
+}
+
+#landing-page {
+    margin: 5% 0 0 0;
+}
+
+#about {
+    font-family: 'Metropolis-Bold';
+    font-size: 32px;
+    margin: 1% 10% 0 10%;
+    
+}
+
+#process {
+    font-family: 'Metropolis-Bold';
+    font-size: 32px;
+    margin: 1% 10% 0 10%;
+    
+}
+
+#about-us {
+    font-family: 'Metropolis';
+    font-size: 28px;
+    margin: 1% 10% 0 10%;
+}
+
+#tagline {
+    font-family: "Metropolis-Light";
+    font-size: 32px;
+}
+
+#landing-img {
+    margin: 0% 0% 5% 0%;
+    min-width: 654px;
+    height: 440px;
+    border: 4px solid var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#disclaimer{
+    background-color: var(--soft-grey);
+    color: grey;
+    font-family: "Metropolis-Light";
+    font-size: small;
+    padding: 2% 35% 1% 35%;
+}
+
+#company-stuff {
+    position: absolute;
+    transform: translateX(-565%);
+}
+
+#go-back {
+    justify-content: center;
+}
+
+#login-label {
+    font-family: 'Metropolis-Bold';
+    font-size: 32px;
+    margin: 2% 0% 0 0%;
+    
+}
+
+#reminder {
+    font-family: 'Metropolis';
+    font-size: 36px;
+}
+
+#user-email {
+    transition: all 500ms ease-in-out;
+    font-family: 'Metropolis-Bold';
+    font-size: 36px;
+}
+
+#user-email:hover {
+    transition: all 500ms ease-in-out;
+    transform: scale(1.05);
+}
+
+#no-pet {
+    font-family: 'Metropolis';
+    font-size: 28px;
+}
+
+#login-page {
+    height: 570px;
+}
+
+#main-logo {
+    margin-top: -15%;
+}
+
+#login-btn {
+    transition: 550ms ease-out;
+    padding: 3%;
+    font-family: 'Metropolis-Light';
+    border: none;
+    min-width: 82px;
+    border-radius: 15px;
+    background-color: var(--red);
+    color: white;
+    font-size: 18px;
+}
+
+#login-btn:hover {
+    transition: all 550ms ease-in-out;
+    transform: scale(1.05);
+    background-color: var(--blue);
+}
+
+#forgot {
+   margin-left: 5%;
+   font-family: 'Metropolis-Bold';
+}
+
+#have-acc {
+    font-family: "Metropolis-Bold";
+    margin-top: 5%;
+}
+
+#manage-pp {
+    color: white;
+}
+
+#make-appt {
+    color:white;
+}
+
+#buttons-navbar {
+    width: 950px;
+    justify-content: center;
+}
+
+#nav {
+    padding: 1%;
+}
+
+
+#manage-profiles-header {
+    animation: load-from-top;
+    animation-duration: 500ms;  
+    font-family: "Metropolis-Bold";
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    margin: 0% 15% 5% 15%;
+    padding: 3% 0% 3% 0%;
+    border-radius: 35px;
+    opacity: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-header {
+    font-family: "Metropolis-Bold";
+    margin-top: -10%;
+}
+
+#form-btn {
+    transition: all 550ms ease-in-out;
+    padding: 2%;
+    min-width: 185px;
+    font-family: 'Metropolis-Light';
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(to right, var(--red) 50%, var(--blue) 50%);
+    background-size: 200%;
+    color: white;
+    margin-bottom: 2%;
+}
+
+#appt-radio {
+    font-family: 'Metropolis-Bold';
+}
+
+#appt-radio:last-child {
+    padding-left: 5%;
+}
+
+#radio {
+    border-radius: 5px;
+    height: 15px;
+    width: 15px;
+}
+
+#form-btn:hover {
+    transition: all 550ms ease-in-out;
+    background-position: right;
+    transform: scale(1.05);
+}
+
+#pet-profiles {
+    margin-bottom: 5%;
+    font-family: 'Metropolis';
+}
+
+#pet-image {
+    transition: all 500ms ease-in-out;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 7px;
+    border: 8px solid var(--red);
+    border-radius: 100%;
+}
+
+#pet-image:hover {
+    transition: all 500ms ease-in-out;
+    
+    transform: scale(1.05);
+    border-color: var(--blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#pet-profile-name {
+    font-family: 'Metropolis-Bold';
+    text-align: center;
+    font-size: 28px;
+    width: 300px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+}
+
+#pet-name {
+    font-family: 'Metropolis';
+    font-size: 36px;
+}
+
+#pet-profile-list {
+    width: 1000px;
+}
+
+#go-back-btn {
+    animation: load-from-left 500ms;
+    transition: all 250ms ease-in-out;
+    font-family: 'Metropolis';
+    text-align: center;
+    font-size: 24px;
+    width:125px;
+    height: 62.5px;
+    background-color: var(--red);
+    border-radius: 15px;
+    color: white;
+    border: none;
+    margin: -5% 0 0 15%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#go-back-btn:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.05);
+    background-color: var(--blue);
+}
+
+#new-pet-profile {
+    width: 800px;
+    margin-top: -10%;
+}
+
+#pet-desc {
+    animation: fade 800ms;
+    font-family: 'Metropolis-Light';
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.hr {
+    border: 0;
+    height: 3px;
+    background-color: black;
+}
+
+#pp-main-content {
+    width: 800px;
+}
+
+#pp-main {
+    width: 800px;
+}
+
+#pp-main-edit {
+    animation: load-from-left;
+    animation-duration: 250ms;
+    transition: all 500ms ease-in-out;
+    font-family: 'Metropolis-Bold';
+    border-radius: 14px;
+    border: none;
+    background-color: var(--soft-grey);
+    float: right;
+    margin-top: -4%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+}
+
+#pp-main-edit:hover {
+    transition: all 500ms ease-in-out;
+    background-color: var(--med-grey);
+    transform: scale(1.05);
+}
+
+#pp-img-lg {
+    animation: load-from-top;
+    animation-duration: 350ms;
+    transition: all 500ms ease-in-out;
+    margin: 0 100px 0 207px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 8px solid var(--red);
+    border-radius: 100%;
+}
+
+#pp-edit-submit-btn {
+    animation: load-from-left;
+    animation-duration: 250ms;
+    transition: all 250ms ease-in-out;
+    font-family: 'Metropolis';
+    text-align: center;
+    font-size: 24px;
+    width:125px;
+    height: 62.5px;
+    background-color: var(--red);
+    border-radius: 15px;
+    color: white;
+    border: none;
+    margin: -5% 0 0 15%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#pp-main-pet {
+    animation: load-from-left;
+    animation-duration: 500ms;
+    font-family: 'Metropolis-Bold';
+    text-align: center;
+    margin-top: 1%;
+    font-size: 36px;
+}
+
+#appt-pet-image {
+    transition: all 500ms ease-in-out;
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border: 4px solid var(--red);
+    border-radius: 100%;
+}
+
+#appt-pet-image:hover {
+    transition: all 500ms ease-in-out;
+    transform: scale(1.05);
+}
+
+#appt-options-list {
+    display: flex;
+    float: left;
+    justify-content: center;
+    margin: 1% 20% 5% 20%;
+    
+}
+
+#appt-name {
+    font-family: 'Metropolis-Bold';
+    text-align: center;
+    font-size: 18px;
+    height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-y: hidden;
+    
+}
+
+#pp-appt-reason {
+    font-family: 'Metropolis-Bold';
+    animation: load-from-top;
+    animation-duration: 500ms;
+    background-color: var(--soft-grey);
+    width: 500px;
+    height: 100px;
+    border-radius: 35px;
+    text-align: center;
+    padding: 5.5% 0% 8% 0%;
+    margin-bottom: 5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+#not-accepted {
+    transition: all 500ms ease-in-out;
+    margin-top: -4%;
+    margin-right: 20%;
+    font-family: 'Metropolis';
+    font-size: 12px;
+    text-align: center;
+}
+
+#not-accepted:hover {
+    transition: all 500ms ease-in-out;
+    transform: scale(1.05);
+}
+
+#appt-date {
+    font-family: 'Metropolis-Bold';
+}
+
+#appt-container {
+    padding-left: 20%;
+}
+
+#pet-appt {
+    width: fit-content;
+    margin-right: 60%;
+    margin-left: 20%;
+}
+
+#user-name {
+    animation: load-from-top 500ms;
+    font-family: 'Metropolis-Bold';
+    font-size: 32px;
+    text-align: center;
+    margin-right: 5%;
+}
+
+#postal {
+    animation: load-from-top 500ms;
+    font-family: 'Metropolis-Bold';
+    font-size: 32px;
+    text-align: center;
+}
+
+#edit-prompt {
+    animation: load-from-top 500ms;
+    font-family: 'Metropolis-Light';
+    font-size: 21px;
+    text-align: center;
+}
+
+#edit-user-profile-btn {
+    animation: load-from-top 500ms;
+    transition: all 550ms ease-in-out;
+    padding: 2%;
+    margin-left: 45%;
+    min-width: 185px;
+    font-family: 'Metropolis-Light';
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(to right, var(--red) 50%, var(--blue) 50%);
+    background-size: 200%;
+    color: white;
+    margin-bottom: 2%;
+}
+
+#edit-user-profile-btn:hover {
+    transition: all 550ms ease-in-out;
+    background-position: right;
+    transform: scale(1.05);
+}
+
+.login-form-text {
+    animation: load-from-left;
+    animation-duration: 500ms;
+    transition: all 550ms ease-in-out;
+    border: 4px solid var(--red);
+    border-radius: 14px;
+    padding: 2%;
+    font-family: 'Metropolis';
+    font-size: 36px;
+    width: 750px;
+    margin: 0% 0% 3% 0%;
+    justify-content: center;
+}
+
+.profile-form-text {
+    animation: fade 500ms;
+    animation: load-from-left;
+    animation-duration: 500ms;
+    transition: all 550ms ease-in-out;
+    border: 4px solid var(--red);
+    border-radius: 14px;
+    padding: 2%;
+    font-family: 'Metropolis';
+    font-size: 36px;
+    width: 750px;
+    margin: 0% 0% 3% 0%;
+    justify-content: center;
+}
+
+.profile-form-text:hover {
+    transition: all 550ms ease-in-out;
+    border: 5px solid var(--blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-btn {
+    transition: all 250ms ease-in-out;
+    display: inline-flex;
+    font-family: 'Metropolis-Light';
+    font-size: 24px;
+    color: white;
+    min-width: 110px;
+    text-decoration: none;
+    border: none;
+    background-color: var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    justify-content: center;
+    padding: 2% 0% 2% 0%;
+}
+
+.dashboard-btn:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+}
+
+.service-btn {
+    animation: load-from-left;
+    animation-duration: 500ms;  
+    transition: all 250ms ease-in-out;
+    display: inline-flex;
+    font-family: 'Metropolis-Light';
+    font-size: 24px;
+    color: white;
+    min-width: 250px;
+    text-decoration: none;
+    border: none;
+    background-color: var(--red);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    justify-content: center;
+    padding: 2%;
+}
+
+.service-btn:hover {
+    transition: all 250ms ease-in-out;
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
+    background-color: var(--blue);
+}
+
+.pet-profile-overview {
+    display: block;
+    float: left;
+    margin: 0% 1% 3% 0%;
+}
+
+.pet-appt-overview {
+    width: 85px;
+    justify-content: center;
+    margin-right: 1%;
+}
+
+@keyframes load-from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes load-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes load-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}

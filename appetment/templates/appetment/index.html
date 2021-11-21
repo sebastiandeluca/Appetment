@@ -1,0 +1,58 @@
+{% extends "appetment/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div id="dashboard-container">
+    <div id="dashboard-content">
+        <div id="dashboard-title" class="flexbox">
+            <img src="https://lh3.googleusercontent.com/fXiiHg3N5UtNDzAZDuVq8q8qFMOhB1rwkrr1Ev3EHvWZTmp8PyWjZAf1R2YuWgJ8qr7oO1KZQEmoJ_KFPpf62SjQGr-p6O14x4JH1N4RwfMYlWKdnNHYgHY2X7TUVjtohX5o46ku7opFRVGATydzIvzCTaspwuSUkqZsMdb4ihDC8HTr3hy-w_0dIGN55u56IPRDDUIhTMH-ji5ZkTo017CAraacg_FM9mAvBMBkF67wLzdQusuRGcU0L_h1NtQpDkk0ILk_i2GYAJTx4UG7v_NFgHsAHkaS8YKro9HcyZvJ2q653HIDG0CNSfFMVf0XS8OBsEF4st77o7DCinxUHqOcCmwXZwnCSAL-rLMNQB3DPrtFU5p3st1WFz7FsBcTYnnt7r7INsKzuKhom3aoDNUaGKsgZvvA1AXEbBq6Q4tToaLdwk7t00odEvah-Izz5xMGrrgwxJ-Y-JvFCxQ3Gc0vIAWagt5HFnWPXIIg_v6wSgYMTByOw86j1nlP9Z-0qsFiN_YraipohxkiwJ0_1Pm-F_YGsxueXBdfOmUQsQ0v7gSCMf1d6cu-JZcLYA5ty5txObKz5OuGEzMHArx6Gz24nFy2WSnGyfbjVEu6TmZ36f7nSDX5WUkHlc18poHkownAU8eOWlI5gUg9X5cD_lHDtK4BMYHA42OOEVbXHgNJbavuyeivIzZrPTWsKEtwiU2e4EgVvUcV0B3CxA6a--o=w500-h421-no?authuser=0">
+        </div>
+        <div id="dashboard-tagline" class='flexbox'>
+            <h3 id="tagline">Vet Visits Made Simple.</h3>
+        </div>  
+        <div id="dashboard-btns" class="flexbox">
+            <div id='buttons-dash'>
+                {% if user.is_authenticated %}
+                
+                <a id="access-service" href="{% url 'main' user.id %}" class='dashboard-btn'>Access</a>
+                <a id="logout-btn" href="{% url 'logout' %}" class='dashboard-btn'>Logout</a>
+                <p id="have-acc">Logged in as: {{ user }}</p>
+                {% else %}
+                <a id="login" href="{% url 'login' %}" class='dashboard-btn'>Login</a>
+                <a id="register" href="{% url 'register' %}" class='dashboard-btn'>Register</a>
+                {% endif %}
+            </div>
+        </div>
+            
+        
+    </div>
+    <div id="landing-page" class="flexbox">
+        <div id="landing-container">
+            <div id="images-container" class="flexbox">
+                <div id='images'>
+                    <img id="landing-img"src="https://todaysveterinarypractice.com/wp-content/uploads/sites/4/2019/03/Women-in-Vteerinary-Medicine-History.jpg">
+                    <img id="landing-img" src='https://blog.petmeds.com/wp-content/uploads/2017/08/veterinary-care-for-cats-720x481.jpg'>
+                </div>
+            </div>
+            <div id="about">
+                <div id="about-header">
+                    <h2 id="about">About Appetment</h2>
+                </div>
+                <div id='about-us'>
+                    <p>Appetment was created to keep things simple for pet-owners. We select the highest-end veterinary clinics in your area and send them your pet's info and their issue all at once, and await the first response. Once we get a response, the clinic's acceptance of your pet is sent to your phone via SMS complete with all of the details including address, time, and which Vet will be assisting you today.</p>
+                </div>
+                
+            </div>
+            <div id="process">
+                <div id="process-header">
+                    <h2 id="about">
+                        How We Do It
+                    </h2>
+                </div>
+                <div id="about-us">
+                    <p>Before coming your area, our experts visit each acceptable veterinarian office and, firstly, recieve their permission to use their information, and secondly, to assess them to see if they meet our criteria for excellence. This ensures that your pets are in safe hands, no matter where you go, using our platform.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

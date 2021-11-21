@@ -1,0 +1,139 @@
+{% extends "appetment/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div id="header" class="flexbox">
+    <div id="header-container">
+        <div id="dashboard-title" class="flexbox">
+            <img id="main-logo" src="https://ibb.co/VVsHzFP">
+        </div>
+        <div id="dashboard-tagline" class='flexbox'>
+            <h3 id="tagline">Vet Visits Made Simple.</h3><br>
+        </div>
+        
+    </div>
+</div>
+ <div id="navigation" class='flexbox'>
+    <div id='buttons-navbar' class='flexbox'>
+        <div id="nav">
+            <a id="manage-pp" class='service-btn' href="#pet-profiles-container">Manage Pet Profiles</a>
+        </div>
+        <div id="nav">
+            <a id="make-appt" class="service-btn" href="#appt_maker">Make Appointment</a>
+        </div>
+        <div id="nav">
+            <a id="logout-btn" href="{% url 'logout' %}" class='service-btn'>Logout</a>
+        </div>
+        
+        
+    </div>
+
+ </div>
+ <h3 id="reminder" class="flexbox">Welcome,</h3><h3 id='user-email' class="flexbox">{{ user.email }}</h3>
+ <p id="userid" style="display:none">{{ user.id }}</p>
+<div id="main-content-container">
+    <div id="main-content">
+        <div id="main">
+            <div id="pet_profile_maker">
+                <h2 id="manage-profiles-header">Create a New Pet Profile</h2>
+                <div id="pet-profile" class="flexbox">
+                    <form id="create-pet-profile">
+                        {% csrf_token %}
+                        <h1 id="form-header">Enter your Pet's...</h1>
+                        <h2 id="login-label">Name:</h3>
+                        <input type="text" name="name" id="pet-name" placeholder="e.g. Toby, Spot, Alf" class="profile-form-text">
+                        <h2 id="login-label">Animal Type:</h3>
+                        <input type="text" name="animal" id="pet-type" placeholder="e.g. Cat, Dog, Bird, Hamster" class="profile-form-text">
+                        <h2 id="login-label">Breed:</h3>
+                        <input type="text" name="breed" id="pet-breed" placeholder="e.g. Tabby, Golden Retriever, Toucan" class="profile-form-text">
+                        <h2 id="login-label">Age (Years):</h3>
+                        <input type="number" min="0" name="age" id="pet-age" placeholder="e.g. 1"class="profile-form-text">
+                        <h2 id="login-label">Illnesses:</h3>
+                        <input type="text" name="illnesses" id="pet-ill" placeholder="e.g. Rabies, Salmonellosis" class="profile-form-text"><br>
+                        <input type="submit" value="Create Pet Profile" name="submit-btn" id='form-btn' class='pet-profile-submit'>
+                    </form>
+                </div>
+            </div>
+            <div id="appt_maker">
+                <h2 id="manage-profiles-header">Make a New Appointment</h2>
+                <div id="appt-maker" class="flexbox">
+                    
+                    {% if pets %}
+                    
+                    <form id="create-appt">
+                        {% csrf_token %}
+                        <h1 id="form-header">Here's What We Need From You...</h1>
+                        <h2 id="login-label">Pet:</h3>
+                        <ul id="appt-options-list" style='list-style-type: none;'>
+                            
+                        </ul>
+                        <h2 id="login-label">Reason for Visit:</h3>
+                        <input type="text" name="reason" placeholder="e.g. Regular Checkup" class="profile-form-text" id="appt-reason"><br>
+                        <label for="urgent" id="appt-radio" >Urgent</label>
+                        <input type="radio" name="urgent" id="radio" class="Urgent" value="Urgent"><br>
+                        <label for="urgent" id="appt-radio">Not Urgent</label>
+                        <input type="radio" name="urgent" id="radio" class="Not Urgent" value="Not Urgent" text="Not Urgent"><br>
+                        
+                        <input type="submit" value="Make Appointment" name="submit-btn" id='form-btn' class="appointment-submit">
+                    </form>
+                    {% else %}
+                    <h2 id="pet-profiles">No Pet Profiles Available. Create one to make an appointment.</h2>
+                    {% endif %}
+                </div>
+            </div>
+            <div id="pet-profiles-container">
+                <h2 id='manage-profiles-header'>Manage Your Pets</h2>
+                
+                <div id='pet-profiles' class="flexbox">
+                
+                    {% if pets %}
+                    <ul id="pet-profile-list">
+
+                    </ul>
+                    {% else %}
+                        <h2 id="reminder">You haven't set up any pets. Why not do it now?</h2>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="pet-profile-content-container" class="flexbox">
+    <h2 id="manage-profiles-header">Your Pet's Pet Profile</h2>
+    <button id="go-back-btn">Go Back</button>
+    <div id="pp-main-container" class="flexbox">
+        <div id="pp-main">
+        </div>
+        
+        <div id="pp-edit" class="flexbox">
+            
+        </div>
+    </div>
+</div>
+<div id="user-profile-content-container">
+    <div id="user-profile-content">
+    <h2 id="manage-profiles-header">Manage Your Profile</h2>
+    <div id="user-profile-info" class="flexbox">
+        <form id="edit-user-profile" style="display: none;">
+            {% csrf_token %}
+            <label for="name" id="login-label">Name:</label><br>
+            <input type="text" id="edited-name" name="name" class="profile-form-text" value='{{ user.first_name }} {{ user.last_name }}'><br>
+            <label for="postal" id="login-label">Postal Code:</label><br>
+            <input type="text" id="edited-postal-code" class="profile-form-text" value={{ user.postal_code }}>
+        </form>
+        <p id="user-name" style="display: none;">Name: {{ user.first_name}} {{ user.last_name }}</p><br>
+        <p id="postal" style="display: none;">Postal Code: {{ user.postal_code }}</p><br>
+    </div>
+    <div id="changes-prompt" class="flexbox">
+        <p id="edit-prompt" style="display: none;">Want to Make Changes?</p>
+    </div>
+    <div id="change-btn">
+        <button id="edit-user-profile-btn" style="display: none;">Edit Your Profile</button>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block script %}
+    <script src="{% static 'appetment/appetment.js' %}"></script>
+{% endblock %}
