@@ -61,4 +61,4 @@ This will bring you to landing page. As mentioned before, in order to access the
 
 
 #### Additional Information
-As the test video has information regarding my actual cats, the database will be empty when it is downloaded. Luckily, creating pet profiles and appointments is easy. ;)
+None required.
