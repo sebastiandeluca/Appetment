@@ -1,4 +1,6 @@
 ﻿# Appetment - CS50w Capstone Project by sebastiandeluca
+ 
+ ![A pet profile](./appetment_img1.png?raw=true)
 
 ### What is Appetment?
 Appetment is a concept for a service that allows you to create profiles for your pets and quickly send out requests to all nearby approved veterinary clinics for an appointment when necessary. Although typically, people find one Vet that they like and go to that vet, there are situations where a service like this could be useful, like if you are worried your pet has an affliction like fleas, or ear mites and urgently want to get them to a vet. 
@@ -8,9 +10,13 @@ Naturally, as with most services, you are able to create an account that houses 
 
 When you sign up, you are only asked for your email and a password. You go to the page where you edit your profile in order to provide the other information.
 
+ ![A pet profile](./appetment_img2.png?raw=true)
 
 #### Pet Profiles
 A pet profile is essentially all of your pet's information that a vet would need. You provide your pet's name, their type (cat, dog, bird, etc.), their breed, their age and any previous afflictions they may have, and it is saved to the database and can be retrieved by the service when you request an appointment. When viewing the pet's profile, you are able to edit it and add a link to a picture of them as a 'profile picture'. You are able to edit and delete these profiles at your whim, and these profiles are per-account, meaning that other accounts can't see your pet profiles and you can't see other account's pet profiles. Every appointment you make for a pet is saved to their profile so you can easily access information like the last time your pet visited the vet.
+
+ ![A pet profile](./appetment_img3.png?raw=true)
+
 #### Appointment Maker
 The concept here is that you make an appointment for your pet through the service, and your pet's information is sent to all nearby approved veterinary clinics. Then, once a clinic has accepted your appointment, you are sent an SMS-Text message informing you that your appointment has been accepted, and the text will have all the information about the appointment, like the time, place, and vet who will be helping you. Unfortunately, this is merely the CONCEPT for it. The reality of this is, you make an appointment and then the appointment is saved to the database and added to your pet's profile, and you are informed that the appointment has been made.
 
@@ -60,5 +66,8 @@ From this, run the command 'python manage.py runserver' and visit the provided l
 This will bring you to landing page. As mentioned before, in order to access the service itself, you need to create an account. Think of it like Uber, how you can't access the service in any way without an account. (Attempting to do so results in a 404 error.)
 
 
-#### Additional Information
-None required.
+#### Vet-Side Images
+ ![A pet profile](./appetment_img4.png?raw=true)
+  ![A pet profile](./appetment_img5.png?raw=true)
+   ![A pet profile](./appetment_img6.png?raw=true)
+    ![A pet profile](./appetment_img7.png?raw=true)
