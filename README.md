@@ -1,4 +1,4 @@
-﻿# Appetment - CS50w Capstone Project by sebastiandeluca
+﻿# Appetment - CS50w Capstone Project by sebastiandeluca (Newest Version not on GitHub)
  
  ![A pet profile](./appetment_img1.png?raw=true)
 
